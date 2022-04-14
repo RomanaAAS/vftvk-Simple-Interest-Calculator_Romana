@@ -1,4 +1,30 @@
-body {background-color:tan;}
-h1{color:green;}
-
+body {background-color:black; font-family: arial;color: white;}
+h1{color:grey;font-family: verdana; text-align: center;}
+.maindiv{
+    background-color: white; 
+    color: black; 
+    width: 400px; 
+    padding: 20px; 
+    border-radius: 25px;
+    margin: auto;    
+}
+#inputs{
+    margin: auto;
+    display: table;
+}
+#inputs p{
+    display: table-row;
+    line-height: 30px;
+}
+#inputs label{
+    display: table-cell;
+}
+.result{ 
+    display:block;
+    line-height: normal;
+}
+.hidden{
+    display:none;
+}
+footer{ font-size: x-small;}
 

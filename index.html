@@ -1,16 +1,41 @@
-<html>
+<!doctype html>
+    <html>
     <head>
+    <title> Simple Interest Calculator</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <div class="maindiv"> 
         <h1>Simple Interest Calculator</h1>
+            <form action="" id="inputs"> 
+                <p>  <label>Amount</label> <input type="number"  id="principal"> </p>
+                <p><label> Interest Rate</label><input type="range"  id="rate" min="1" max="20" step="0.25" value="10.25" onchange="updateRate()">
+                                <span id="rate_val">10.25</span><span>%</span></p>
+                <p><label>No. of Years</label> <select name="years" id="years"> 
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            </select></p><br>
+    
+            <p><button type="button"  onclick="compute()">Compute Interest</button></p>
+         </form>
+    
+        <div id="result" class ="result hidden">
+            <p>If you deposit <mark><label id="principalmessage"></label></mark> €,</p> 
+            <p>at an interest rate of <mark><label id="ratemessage"></label></mark> %,</p>
+            <p>You will receive an amount of <mark><label id="amountmessage"></label></mark> €,</p>
+            <p>in the year <mark><label id="yearmessage"></label></mark></p>
+        </div>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+        <footer>&#169; This Calculator belongs to Romana</footer>
+        </div>
     </body>
 </html>
