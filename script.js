@@ -26,13 +26,14 @@ function compute()
     var years=document.getElementById("years").value;
 
     var interest=principal*years*rate/100;
+    var finalamount=interest+parseInt(principal);
 
     var today = new Date();    
     var calcyear= parseInt(today.getFullYear())+parseInt(years);
     
     document.getElementById("principalmessage").innerHTML = ""+principal;
 	document.getElementById("ratemessage").innerHTML = ""+rate;
-	document.getElementById("amountmessage").innerHTML = ""+interest;
+	document.getElementById("amountmessage").innerHTML = ""+finalamount;
 	document.getElementById("yearmessage").innerHTML = ""+calcyear;
 	Message1();
 
